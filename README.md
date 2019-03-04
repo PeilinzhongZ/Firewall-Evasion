@@ -21,3 +21,4 @@ out there, even if the firewall disallows IMAP.
 browse Internet and go to secure sites.
 * A server somewhere on Internet, even a Raspberry pi, with root access.
 
+## Setting up the Server
