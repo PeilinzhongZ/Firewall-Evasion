@@ -22,3 +22,22 @@ browse Internet and go to secure sites.
 * A server somewhere on Internet, even a Raspberry pi, with root access.
 
 ## Setting up the Server
+
+You need to access your server at least onece via regular SSH, port 22. If you are already behind the 
+restricted firewall, you will not be able to log in the server using port 22.
+
+> * Set the Server to be listening on the port 443 (HTTPS port). Simply Log into server, and edit the file /etc/ssh/sshd_config and add the line: Port 443.
+> * After setting up, reboot the server with following command: sudo reboot.
+
+Now you can access the server using port 443. Command: ssh -p 443 $user@my server address$, Since I am using Raspberry pi, 
+I access with pi with ssh -p 443 root@192.168.2.2 in local enviroment.
+
+## SSH tunneling
+
+If you want to access to email account via IMAP (basically port 143) when the firewall forbids it. You can create 
+a ssh tunnel with the following command: ssh -L localhost:10143:$imap.qq.com:143$ -p 443 $user@my server address$
+
+Here is an example: ssh -L localhost:10143:imap.qq.com:993 -p 443 root@192.168.2.2, then type in my passwords of server. 
+Now I can bypass the firewall that forbids the Port 993. This would forward any IMAP requests received on localhost port 
+10143 to imap.qq.com port 993, all through a ssh tunnel. After that we can set up our mail application using localhost:10143
+ as incoming server and port, then we are able to receive our emails on restricted filewall.
