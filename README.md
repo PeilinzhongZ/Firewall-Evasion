@@ -57,6 +57,4 @@ Now I can bypass the firewall that forbids the Port 993. This would forward any 
 10143 to imap.qq.com port 993, all through a ssh tunnel. After that we can set up our mail application using localhost:10143 as incoming server and port, then we are able to receive our emails on restricted filewall.
 
 ## Inital Presentation Slide link
-```
 https://docs.google.com/presentation/d/1hYyY1V4O0fY9Y0HEpYeIIIEmk2xrXhqWGCOo9nRjtMM/edit?usp=sharing
-```
