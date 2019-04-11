@@ -30,22 +30,28 @@ restricted firewall, you will not be able to log in the server using port 22.
 > * After setting up, reboot the server with following command: sudo reboot.
 
 Now you can access the server using port 443. Command: ssh -p 443 $user@my server address$, Since I am using Raspberry pi, 
-I access with pi with 
-`ssh -p 443 root@192.168.2.2`
-in local enviroment.
+I access with pi with following command in local env.
+
+```
+ssh -p 443 root@192.168.2.2
+```
 
 ## SSH tunneling
 
 If you want to access to email account via IMAP (basically port 143) when the firewall forbids it. You can create 
 a ssh tunnel with the following command: 
-`ssh -L localhost:10143:$imap.qq.com:143$ -p 443 $user@my server address$`
+
+```
+ssh -L localhost:10143:$imap.qq.com:143$ -p 443 $user@my server address$
+```
 
 Here is an example: 
-`ssh -L localhost:10143:imap.qq.com:993 -p 443 root@192.168.2.2`
+
+```
+ssh -L localhost:10143:imap.qq.com:993 -p 443 root@192.168.2.2
+```
 
 Then type in my passwords of server. 
 
 Now I can bypass the firewall that forbids the Port 993. This would forward any IMAP requests received on localhost port 
-10143 to imap.qq.com port 993, all through a ssh tunnel. After that we can set up our mail application using 
-`localhost:10143`
-as incoming server and port, then we are able to receive our emails on restricted filewall.
+10143 to imap.qq.com port 993, all through a ssh tunnel. After that we can set up our mail application using localhost:10143 as incoming server and port, then we are able to receive our emails on restricted filewall.
