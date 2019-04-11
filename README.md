@@ -1,10 +1,5 @@
 # Firewall-Evasion (Bypass strict firewalls on restricted networks)
 
-## Inital Presentation Slide link
-```
-https://docs.google.com/presentation/d/1hYyY1V4O0fY9Y0HEpYeIIIEmk2xrXhqWGCOo9nRjtMM/edit?usp=sharing
-```
-
 As you can see, more and more pulic wireless hostspots are available with a subscription, 
 accessible throught a web login form. The thing is, most of the tiem ,theses hospots will have
 a reduced connectivity. Only some ports and protocols will be allowed. For instance, you may be restricted 
@@ -60,3 +55,8 @@ Then type in my passwords of server.
 
 Now I can bypass the firewall that forbids the Port 993. This would forward any IMAP requests received on localhost port 
 10143 to imap.qq.com port 993, all through a ssh tunnel. After that we can set up our mail application using localhost:10143 as incoming server and port, then we are able to receive our emails on restricted filewall.
+
+## Inital Presentation Slide link
+```
+https://docs.google.com/presentation/d/1hYyY1V4O0fY9Y0HEpYeIIIEmk2xrXhqWGCOo9nRjtMM/edit?usp=sharing
+```
