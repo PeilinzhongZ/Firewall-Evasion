@@ -1,5 +1,10 @@
 # Firewall-Evasion (Bypass strict firewalls on restricted networks)
 
+## Inital Presentation Slide link
+```
+https://docs.google.com/presentation/d/1hYyY1V4O0fY9Y0HEpYeIIIEmk2xrXhqWGCOo9nRjtMM/edit?usp=sharing
+```
+
 As you can see, more and more pulic wireless hostspots are available with a subscription, 
 accessible throught a web login form. The thing is, most of the tiem ,theses hospots will have
 a reduced connectivity. Only some ports and protocols will be allowed. For instance, you may be restricted 
